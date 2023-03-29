@@ -9,32 +9,104 @@
  *
  *****************************************************************************/
 /**
- * @file <Add File Name> 
- * @brief <Add Brief Description Here >
+ * @file stats.h 
+ * @brief Header file containing all functions declarations
  *
- * <Add Extended Description Here>
- *
- * @author <Add FirsName LastName>
- * @date <Add date >
+ * @author Lucas Vivian
+ * @date 29/03/2023
  *
  */
+ 
 #ifndef __STATS_H__
 #define __STATS_H__
 
-/* Add Your Declarations and Function Comments here */ 
-
 /**
- * @brief <Add Brief Description of Function Here>
+ * @brief Print statistics of array
  *
- * <Add Extended Description Here>
+ * THe statistics include minimum, maximum, mean and median values
  *
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
+ * @param array - pointer to array
+ * @param size - integer variable for array size
  *
- * @return <Add Return Informaiton here>
+ * @return the function doesn`t return any value
  */
 
+void print_statistics(unsigned char *array, unsigned int size);
+
+/**
+ * @brief Print array on screen
+ *
+ * @param array - pointer to array
+ * @param size - integer variable for array size
+ *
+ * @return the function doesn`t return any value
+ */
+
+void print_array(unsigned char *array, unsigned int size);
+
+/**
+ * @brief Finds the median value from array
+ *
+ * Finds the middle value, between the bigger and the smaller halfs of the array
+ *
+ * @param array - pointer to array
+ * @param size - integer variable for array size
+ *
+ * @return median value
+ */
+
+unsigned int find_median(unsigned char *array, unsigned int size);
+
+/**
+ * @brief Finds the mean value from array
+ *
+ * Finds the mean value of the array, sums all values and divides it by the length
+ *
+ * @param array - pointer to array
+ * @param size - integer variable for array size
+ *
+ * @return mean value
+ */
+
+unsigned int find_mean(unsigned char *array, unsigned int size);
+
+/**
+ * @brief Finds the maximum value from array
+ *
+ * Finds the biggest value on the array
+ *
+ * @param array - pointer to array
+ * @param size - integer variable for array size
+ *
+ * @return maximum value
+ */
+
+unsigned int find_maximum(unsigned char *array, unsigned int size);
+
+/**
+ * @brief Finds the minimum value from array
+ *
+ * Finds the biggest value on the array
+ *
+ * @param array - pointer to array
+ * @param size - integer variable for array size
+ *
+ * @return minimum value
+ */
+
+unsigned int find_minimum(unsigned char *array, unsigned int size);
+
+/**
+ * @brief Sorts array
+ *
+ * Sort array from largest to smallest values
+ *
+ * @param array - pointer to array
+ * @param size - integer variable for array size
+ *
+ * @return the function doesn`t return any value
+ */
+
+void sort_array(unsigned char *array, unsigned int size);
 
 #endif /* __STATS_H__ */
